@@ -24,7 +24,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
     createCart();
 
-    let field = document.querySelector('.cart-field'),
+    let field = document.querySelector('.field'),
         cart = document.querySelector('.cart'),
         close = document.querySelector('.close');
 
@@ -38,7 +38,7 @@ window.addEventListener('DOMContentLoaded', function() {
     openBtn.addEventListener('click', openCart);
     close.addEventListener('click', closeCart);
 
-    for (i = 0; i < buttons.length; i++) {
+    for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', function() {
             let item = products[i].cloneNode(true),
                 btn = item.querySelector('button');
