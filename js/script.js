@@ -38,8 +38,8 @@ window.addEventListener('DOMContentLoaded', function() {
     openBtn.addEventListener('click', openCart);
     close.addEventListener('click', closeCart);
 
-    for (let i = 0; i < buttons.length; i++) {
-        buttons[i].addEventListener('click', function() {
+    buttons.forEach(function (item, i) {
+        item.addEventListener('click', function() {
             let item = products[i].cloneNode(true),
                 btn = item.querySelector('button');
 
@@ -47,6 +47,6 @@ window.addEventListener('DOMContentLoaded', function() {
             field.appendChild(item);
             products[i].remove();
         });
-    }
+    });
 });
 
